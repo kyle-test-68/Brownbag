@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWA Example</title>
     <link rel="icon" type="image/png" href="images/icons/don.png">
+    <meta name="theme-color" content="#ff0300" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="manifest" href="/manifest.json">
 </head>
@@ -57,6 +58,23 @@
             </div>
         </a>
     </div>
+    <script defer>
+        if ('serviceWorker' in navigator) {
+            console.log('Service Worker and Push is supported');
+
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(swReg) {
+                    console.log('Service Worker is registered', swReg);
+                    //test();
+                })
+                .catch(function(error) {
+                    console.error('Service Worker Error', error);
+                });
+        } else {
+            console.warn('Service worker is not supported');
+        }
+    </script>
+
 
 
 </body>
