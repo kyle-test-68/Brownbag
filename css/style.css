@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+nav {
+    background-image: linear-gradient(to bottom right, #ff0300, #ffaf47);
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+}
+
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    padding: 0;
+}
+
+nav .brand-logo.center {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+nav .brand-logo.center img {
+    height: 56px;
+    width: 148px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 100%;
+    width: 90%;
+    padding: 10px;
+}
+
+.cards {
+    height: 20%;
+    margin-bottom: 10px;
+    width: auto;
+    border: 1px #C3CCCD solid;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.cards .card-img {
+    float: left;
+    max-width: 30%;
+    height: 100%;
+}
+
+.cards .card-details {
+    padding-left: 10px;
+    max-width: 70%;
+    height: 100%;
+}
+
+.cards .card-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: auto;
+    padding: 10px;
+}
+
+.content .content-img {
+    float: left;
+    padding: 10px;
+    max-width: 30%;
+    height: 100%;
+}
+
+.content .content-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .content-details {
+    padding-left: 10px;
+    height: 100%;
+}
+
+.content .content-details p {
+    text-align: justify;
+}
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    body {
+        font-size: 1rem;
+    }
+    .container {
+        width: 70%;
+    }
+    .cards {
+        height: 30%;
+    }
+}
